@@ -5,6 +5,7 @@ public class Book {
     private int numberOfPages;
     private Genre genre;
     private int totalBorrowingTime;
+    private boolean isAvailable;
 
     public Book(String name, String author, int publicationYear, int numberOfPages, Genre genre,int totalBorrowingTime) {
         this.name = name;
@@ -13,10 +14,27 @@ public class Book {
         this.numberOfPages = numberOfPages;
         this.genre = genre;
         this.totalBorrowingTime = totalBorrowingTime;
+        this.isAvailable = true;
+    }
+
+    public boolean isAvailable() {
+        return  isAvailable;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.isAvailable = available;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public int getTotalBorrowingTime() {
         return this.totalBorrowingTime;
+    }
+
+    public void setTotalBorrowingTime() {
+        this.totalBorrowingTime ++;
     }
 
     @Override
